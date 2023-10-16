@@ -264,3 +264,21 @@ button:active {
 .imgGrandeFilho {
     width: 100%;
 }
+
+@media (min-width: 768px) {
+    .liquido{
+        display: none;
+    }
+    .beneficios div{
+        width: 80%;
+        
+    }
+
+    .beneficios div p{
+        text-align: center !important;
+    }
+
+    button{
+        width: 50%;
+    }
+}
