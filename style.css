@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+h2 {
+    color: #fff;
+    font-size: 24px;
+}
+
+section {
+    text-align: center;
+    padding-top: 20px;
+}
+
+section p {
+    color: lightgray;
+    padding: 4px;
+}
+
+swiper-container {
+    width: 100%;
+}
+
+swiper-slide {
+    width: 10%;
+    height: 120vh;
+}
+
+swiper-slide img {
+    border-radius: 8px;
+}
+
+
+h3 {
+    color: #fff;
+}
+
+section p {
+    color: rgb(240, 239, 239);
+    padding: 4px;
+}
+
+button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: #48d64f;
+    color: white;
+    border: none;
+    font-size: 16px;
+    width: 70%;
+    font-weight: bolder;
+
+
+    transition: all 0.1s ease-in;
+    box-shadow: 0 5px 0px rgb(38, 118, 38);
+    border: 2px solid rgb(38, 118, 38);
+}
+
+button:active {
+    transform: translateY(4px);
+    border-bottom-width: 2px;
+    box-shadow: none;
+}
+
+.wppButton{
+    width: 80px;
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    margin: 15px;
+}
+.header {
+    position: relative;
+    text-align: center;
+    background: linear-gradient(to left top, #224c5c, #005f6a, #00726c, #0a8462, #4a934e);
+    color: white;
+}
+
+.logo {
+    width: 50px;
+    fill: white;
+    padding-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.inner-header {
+    height: 65vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 150px;
+}
+
+.content-wave {
+    position: relative;
+    height: 30vh;
+    text-align: center;
+    background-color: white;
+}
+
+.content-wave h3 {
+    color: #0a8462;
+    font-weight: bold;
+    font-size: 28px;
+    padding-top: 30px;
+}
+
+.liquido {
+    position: absolute;
+    width: 100%;
+}
+
+.liquido img {
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Animation */
+
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+
+    .content {
+        height: 30vh;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+/*------------BENEFICIOS------------------*/
+
+.beneficios {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to left top, #224c5c, #005f6a, #00726c, #0a8462, #4a934e);
+    padding-top: 60px;
+}
+.beneficios div{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 20px;
+    background: rgba( 255, 255, 255, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.beneficios h3 {
+    color: #fff;
+
+}
+
+/*------------PLANOS-----------------*/
+
+.planos {
+    position: relative;
+    background-image: linear-gradient(to right top, #4a934e, #0a8462, #00726c, #005f6a, #224c5c);
+    padding-bottom: 50px;
+}
+
+
+
+.planos lottie-player {
+    z-index: 3;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 100px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+
+
+.valor img {
+    position: absolute;
+    margin-left: 22px;
+    margin-top: -20px;
+}
+
+
+.imgGrande {
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    z-index: 2;
+    
+    display: none;
+}
+
+.imgGrandeFilho {
+    width: 100%;
+}
