@@ -72,6 +72,7 @@ function ocultaElemento(elemento, tempo) {
 
 document.getElementById('whatsapp').addEventListener('click', enviaMsgWhats);
 document.getElementById('whatsapp-2').addEventListener('click', enviaMsgWhats);
+document.getElementById('whatsapp-3').addEventListener('click', enviaMsgWhats);
 document.querySelector('.wppButton').addEventListener('click', enviaMsgWhats)
 
 function enviaMsgWhats(){

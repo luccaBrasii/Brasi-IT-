@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 html,
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -69,7 +70,21 @@ button:active {
     box-shadow: none;
 }
 
-.wppButton{
+.botao {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: #ff002f;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    width: 70%;
+    font-weight: bolder;
+    transition: all 0.1s ease-in;
+    box-shadow: 0 5px 0px rgb(118, 38, 38);
+    border: 2px solid rgb(118, 38, 38);
+}
+
+.wppButton {
     width: 80px;
     position: fixed;
     z-index: 3;
@@ -78,6 +93,7 @@ button:active {
     cursor: pointer;
     margin: 15px;
 }
+
 .header {
     position: relative;
     text-align: center;
@@ -119,16 +135,32 @@ button:active {
 
 .content-wave {
     position: relative;
-    height: 30vh;
     text-align: center;
     background-color: white;
+    padding: 10px;
 }
 
 .content-wave h3 {
-    color: #0a8462;
+    color: #ff002f;
     font-weight: bold;
     font-size: 28px;
     padding-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.content-wave strong {
+    color: black;
+}
+
+.content-wave p {
+    color: rgb(58, 58, 58);
+    font-size: 16px;
+}
+
+.last-p {
+    padding-top: 20px;
+    margin-bottom: -20px;
 }
 
 .liquido {
@@ -139,6 +171,7 @@ button:active {
 .liquido img {
     margin-top: 20px;
     width: 100%;
+    display: none;
 }
 
 /* Animation */
@@ -201,25 +234,43 @@ button:active {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to left top, #224c5c, #005f6a, #00726c, #0a8462, #4a934e);
     padding-top: 60px;
+    background-color: rgb(245, 245, 245);
+    clip-path: polygon(0 0, 100% 1%, 100% 100%, 0% 100%);
+
 }
-.beneficios div{
+
+.beneficios div {
     padding-left: 10px;
     padding-right: 10px;
     margin: 20px;
-    background: rgba( 255, 255, 255, 0.1 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4.5px );
-    -webkit-backdrop-filter: blur( 4.5px );
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
 }
 
 .beneficios h3 {
-    color: #fff;
-
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff002f;
 }
+
+.beneficios strong {
+    color: black;
+}
+
+.beneficios p {
+    color: black
+}
+
+.beneficios .botao {
+    margin: 30px;
+}
+
 
 /*------------PLANOS-----------------*/
 
@@ -227,6 +278,7 @@ button:active {
     position: relative;
     background-image: linear-gradient(to right top, #4a934e, #0a8462, #00726c, #005f6a, #224c5c);
     padding-bottom: 50px;
+    clip-path: polygon(0 0, 100% 1%, 100% 100%, 0% 100%);
 }
 
 
@@ -257,7 +309,7 @@ button:active {
     height: 1000px;
     position: absolute;
     z-index: 2;
-    
+
     display: none;
 }
 
@@ -266,19 +318,20 @@ button:active {
 }
 
 @media (min-width: 768px) {
-    .liquido{
+    .liquido {
         display: none;
     }
-    .beneficios div{
+
+    .beneficios div {
         width: 80%;
-        
+
     }
 
-    .beneficios div p{
+    .beneficios div p {
         text-align: center !important;
     }
 
-    button{
+    button {
         width: 50%;
     }
 }
