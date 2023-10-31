@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
 
 html,
 body {
@@ -57,8 +57,7 @@ button {
     font-size: 16px;
     width: 70%;
     font-weight: bolder;
-
-
+    cursor: pointer;
     transition: all 0.1s ease-in;
     box-shadow: 0 5px 0px rgb(38, 118, 38);
     border: 2px solid rgb(38, 118, 38);
@@ -69,6 +68,7 @@ button:active {
     border-bottom-width: 2px;
     box-shadow: none;
 }
+
 
 .botao {
     padding: 8px 16px;
@@ -279,6 +279,12 @@ button:active {
     background-image: linear-gradient(to right top, #4a934e, #0a8462, #00726c, #005f6a, #224c5c);
     padding-bottom: 50px;
     clip-path: polygon(0 0, 100% 1%, 100% 100%, 0% 100%);
+    height: auto;
+
+}
+
+.imgSlide {
+    cursor: pointer;
 }
 
 
@@ -295,26 +301,60 @@ button:active {
     transition: opacity 1s ease-in-out;
 }
 
+.valor {
+    display: flex;
+    justify-content: center;
+}
 
+.valor h3 {
+    color: black;
+}
+
+.valor div {
+    margin: 10px;
+    background-color: #ffff;
+    border-radius: 8px;
+    width: 320px;
+}
+
+.valor oldPrice {
+    text-decoration: line-through;
+    font-size: 14px;
+    color: rgb(137, 137, 137);
+}
+
+.valor strong {
+    color: #ff002f;
+    font-size: 24px;
+    font-weight: bold;
+}
 
 .valor img {
     position: absolute;
-    margin-left: 22px;
+    margin-left: -55px;
     margin-top: -20px;
 }
 
+.valor small {
+    font-weight: bold;
+    color: rgb(137, 137, 137);
+    margin-top: -20px;
+}
+
+.valor button {
+    margin: 8px 0px;
+}
 
 .imgGrande {
     width: 100%;
-    height: 1000px;
-    position: absolute;
     z-index: 2;
-
     display: none;
 }
 
 .imgGrandeFilho {
     width: 100%;
+    object-fit: cover;
+
 }
 
 @media (min-width: 768px) {
@@ -322,16 +362,35 @@ button:active {
         display: none;
     }
 
-    .beneficios div {
-        width: 80%;
+    .beneficios {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+    }
 
+    .beneficios div {
+        width: 30%;
     }
 
     .beneficios div p {
         text-align: center !important;
     }
 
-    button {
-        width: 50%;
+
+    .botao {
+        width: 300px;
+        position: absolute;
+        bottom: -700px;
+        margin-bottom: 20px;
     }
+
+    .valor div {
+        width: 450px;
+    }
+
+    button {
+        width: 300px;
+    }
+
+
 }
