@@ -253,6 +253,8 @@ button:active {
 
 }
 
+
+
 .beneficios h3 {
     font-size: 24px;
     font-weight: bold;
@@ -314,7 +316,7 @@ button:active {
     margin: 10px;
     background-color: #ffff;
     border-radius: 8px;
-    width: 320px;
+    width: 80%;
 }
 
 .valor oldPrice {
@@ -393,4 +395,70 @@ button:active {
     }
 
 
+}
+
+
+.login-box {
+    width: 400px;
+    padding: 40px;
+    box-sizing: border-box;
+    margin-top: -30px;
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    pointer-events: none;
+    transition: .5s;
+}
+
+
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label,
+.login-box .textarea:focus~label,
+.login-box .textarea:valid~label {
+    top: -10px;
+    left: 0;
+    color: #ff002f;
+    background-color: #fff;
+    padding: 0px 6px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.login-box .textarea {
+    width: 100%;
+    margin-top: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    resize: none;
+    color: white;
+    transition: height 3s ease;
+}
+
+.login-box .textarea:focus {
+    border-color: #fff;
 }

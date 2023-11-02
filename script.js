@@ -25,7 +25,6 @@ img.forEach(imagem => {
 });
 
 
-
 imgGrande.addEventListener('click', () => {
   if (contador === false) {
     imgGrande.style.display = 'none'
@@ -40,7 +39,7 @@ imgGrande.addEventListener('click', () => {
 })
 
 /*---------------------------------*/
-//.swiper-container
+//INDICAÇÃO PRO USUARIO PASSAR PRO LADO / CLICAR
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -74,17 +73,31 @@ function ocultaElemento(elemento, tempo) {
 }
 
 /*---------------WHATSAPP------------------*/
+const nome = document.querySelector('#nome')
+const msg = document.querySelector('#expanding-textarea')
+
+
+document.getElementById('submitForm').addEventListener('click', (e) => {
+  e.preventDefault()
+  enviaMsgWhats(nome, msg)
+});
 
 document.getElementById('whatsapp').addEventListener('click', enviaMsgWhats);
-document.getElementById('whatsapp-2').addEventListener('click', enviaMsgWhats);
 document.getElementById('whatsapp-3').addEventListener('click', enviaMsgWhats);
 document.querySelector('.wppButton').addEventListener('click', enviaMsgWhats)
 
-function enviaMsgWhats() {
-  var message = ''
-  var phone_number = "55" + "62996973771";
-  var url = "https://api.whatsapp.com/send?phone=" + phone_number + "&text=" + encodeURIComponent(message);
+function enviaMsgWhats(nome, msg) {
 
+  let message = 'Oi, vim pelo site!'
+  var phone_number = "55" + "62996973771";
+
+
+  if (nome, msg) {
+    message = `Olá, meu nome é ${nome.value}, e tenho um projeto! ${msg.value}`
+  }
+
+
+  var url = "https://api.whatsapp.com/send?phone=" + phone_number + "&text=" + encodeURIComponent(message);
   setTimeout(() => {
     window.open(url);
   }, 500)
@@ -128,3 +141,16 @@ function contadorOferta(dataExpiracao) {
 // Exemplo de uso
 const dataExpiracao = new Date('2023-11-30');
 const intervalo = contadorOferta(dataExpiracao);
+
+/*---------------------TEXTAREA=-------------*/
+
+document.addEventListener('input', function (e) {
+  if (e.target && e.target.id === 'expanding-textarea') {
+    autoExpand(e.target);
+  }
+});
+
+function autoExpand(textarea) {
+  textarea.style.height = 'auto';
+  textarea.style.height = (textarea.scrollHeight) + 'px';
+}
