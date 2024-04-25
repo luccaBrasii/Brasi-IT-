@@ -139,7 +139,7 @@ function contadorOferta(dataExpiracao) {
 }
 
 // Exemplo de uso
-const dataExpiracao = new Date('2024-01-01');
+const dataExpiracao = new Date('2024-06-01');
 const intervalo = contadorOferta(dataExpiracao);
 
 /*---------------------TEXTAREA=-------------*/
