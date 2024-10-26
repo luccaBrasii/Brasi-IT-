@@ -89,7 +89,7 @@ document.querySelector('.wppButton').addEventListener('click', enviaMsgWhats)
 function enviaMsgWhats(nome, msg) {
 
   let message = 'Oi, vim pelo site!'
-  var phone_number = "55" + "62996973771";
+  var phone_number = "55" + "6299543189";
 
 
   if (nome, msg) {
